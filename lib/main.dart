@@ -1,4 +1,8 @@
+import 'dart:io';
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -11,6 +15,7 @@ import 'package:weeb_republic_app/pages/splash.dart';
 
 Future main() async {
   await dotenv.load(fileName: ".env");
+
   runApp(MaterialApp(
     routes: {
       "/" : (context)=>Splash(),

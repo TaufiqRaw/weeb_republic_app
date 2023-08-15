@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_card/image_card.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:weeb_republic_app/pages/home/top-bar.dart';
@@ -40,6 +41,7 @@ class _HomeState extends State<Home> {
         status = "success";
       });
     } catch (err){
+      Fluttertoast.showToast(msg: err.toString());
       setState(() {
         status = "error";
       });
